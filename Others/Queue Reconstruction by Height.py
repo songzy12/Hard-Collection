@@ -8,7 +8,7 @@ class Solution(object):
         queue = [i for i in range(len(people))]
         people.sort()
         i = 0
-        _people = list(people) # NOTE: store origin array
+        _people = [list(x) for x in people] # NOTE: store origin array
         while i < len(people):
             j = i + 1
             while j < len(people) and people[j][0] == people[i][0]:
